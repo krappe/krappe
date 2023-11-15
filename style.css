@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+#video-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+#video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+}
+
+#content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  animation: colorChange 2s linear infinite;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes colorChange {
+  0% {
+    color: #00CED1;
+  }
+
+  50% {
+    color: #fff;
+  }
+
+  100% {
+    color: #00CED1;
+  }
+}
+
+#content p {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#languageButton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#portfolio-button {
+  margin-top: 20px;
+}
+
+#portfolio-button a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#portfolio-button a:hover {
+  background-color: #555;
+}
+
+#social-icons {
+  margin-top: 30px;
+}
+
+#social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-position: center;
+}
+
+#social-icons a.youtube {
+  background-image: url('/imgs/socials/youtube.png');
+}
+
+#social-icons a.twitter {
+  background-image: url('/imgs/socials/twitter.png');
+}
+
+#social-icons a.twitch {
+  background-image: url('/imgs/socials/twitch.png');
+}
+
+#social-icons a.instagram {
+  background-image: url('/imgs/socials/instagram.png');
+}
+
+#social-icons a.discord {
+  background-image: url('/imgs/socials/discord.png');
+}
